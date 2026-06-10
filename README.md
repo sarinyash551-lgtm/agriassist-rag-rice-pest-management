@@ -1,83 +1,48 @@
-﻿AgriAssist-RAG: Retrieval-Augmented Q&A System for Rice Pest Management
-Yash Sarin (202480201)
+# AgriAssist-RAG: Rice Pest Management Assistant
 
+## Overview
 
+AgriAssist-RAG is a Retrieval-Augmented Generation (RAG) based NLP system designed to assist farmers in managing rice pests. The system retrieves relevant agricultural knowledge from a vector database and provides deterministic recommendations based on retrieved evidence.
 
+## Features
 
+* Rice pest management assistance
+* FAISS-based vector search
+* Sentence Transformer embeddings
+* Retrieval-Augmented Generation (RAG)
+* Streamlit web interface
 
-1. Required Libraries / Dependencies
+## Technologies
 
-This project uses the following Python libraries:
+* Python
+* Streamlit
+* FAISS
+* Sentence Transformers
+* NumPy
 
-- streamlit
-- sentence-transformers
-- faiss-cpu
-- pdfplumber
-- transformers
-- numpy
-- json
-- urllib
-- pickle (for saving metadata)
+## Installation
 
-Optional (used in the notebook):
-- matplotlib
+```bash
+pip install -r requirements.txt
+```
 
+## Run
 
-`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+```bash
+streamlit run app_full.py
+```
 
-2. Installation & Setup
+## Project Structure
 
-Ensure Python 3.9+ is installed.
+* app_full.py — Main application
+* index_data/ — FAISS index and metadata
+* rag_nlp.ipynb — Development notebook
+* demo_results.json — Sample outputs
 
-Install dependencies:
-- pip install streamlit sentence-transformers faiss-cpu pdfplumber transformers numpy
-- If `faiss-cpu` fails on Windows, use:
-- pip install faiss-cpu==1.7.4
+## Author
 
+Yash Sarin
 
-Project folder should look like:
+Department of Artificial Intelligence
 
-
-AgriAssist/
-│
-├── rag_nlp.ipynb
-├── app.py
-├── demo_results.json
-│
-├── download_pdfs/
-├── agri_corpus/
-└── index_data/
-
-These folders are automatically created by the notebook.
-
-`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````	
-
- 3. How to Run / Deploy the Code
-
-✔ Running the Notebook (Google Colab or Jupyter)
-
-1. Open `rag_nlp.ipynb`.
-2. Run all cells **top to bottom**.
-3. The notebook will:
-   - Download agricultural PDFs  
-   - Extract and clean text  
-   - Chunk the text  
-   - Generate embeddings  
-   - Build a FAISS index  
-   - Run a Q&A demo  
-   - Save all processed files  
-
-✔ Running the Streamlit App (Local Deployment)
-
-In the project folder, run:
-
-- streamlit run app.py
-- Your browser will open:
-- http://localhost:8501
-
-Ask questions like:
-
-> “How to manage brown planthopper in rice?”
-
-End of README
-
+Woosong University
