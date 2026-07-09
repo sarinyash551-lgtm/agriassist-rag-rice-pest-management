@@ -1,48 +1,95 @@
-# AgriAssist-RAG: Rice Pest Management Assistant
+# 🌾 AgriAssist RAG: Rice Pest Management Assistant
 
-## Overview
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![RAG](https://img.shields.io/badge/RAG-Enabled-green)
+![FAISS](https://img.shields.io/badge/VectorDB-FAISS-orange)
+![License](https://img.shields.io/badge/License-MIT-success)
 
-AgriAssist-RAG is a Retrieval-Augmented Generation (RAG) based NLP system designed to assist farmers in managing rice pests. The system retrieves relevant agricultural knowledge from a vector database and provides deterministic recommendations based on retrieved evidence.
+## 📌 Overview
 
-## Features
+AgriAssist is an AI-powered Retrieval-Augmented Generation (RAG) application that assists farmers by answering rice pest management queries using semantic search over an agricultural knowledge base.
 
-* Rice pest management assistance
-* FAISS-based vector search
-* Sentence Transformer embeddings
-* Retrieval-Augmented Generation (RAG)
-* Streamlit web interface
+The system retrieves the most relevant information using FAISS vector search before generating accurate, context-aware responses.
 
-## Technologies
+---
 
-* Python
-* Streamlit
-* FAISS
-* Sentence Transformers
-* NumPy
+## ✨ Features
 
-## Installation
+- 🌾 Rice pest diagnosis
+- 🔍 Semantic search using FAISS
+- 🤖 Retrieval-Augmented Generation (RAG)
+- ⚡ Fast document retrieval
+- 💻 Interactive Streamlit application
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- FAISS
+- Sentence Transformers
+- NumPy
+- Streamlit
+- Pickle
+
+---
+
+## 📂 Project Structure
+
+```text
+agriassist-rag-rice-pest-management/
+
+├── app.py
+├── requirements.txt
+├── README.md
+├── LICENSE
+├── .gitignore
+├── .gitattributes
+│
+├── faiss_index/
+│   ├── embeddings.npy
+│   ├── meta.pkl
+│   └── faiss.index
+│
+├── evaluation_results.json
+│
+└── agriassist_rag_pipeline.ipynb
+```
+
+---
+
+## 🚀 Installation
+
+```bash
+git clone <repository-url>
+```
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run
-
 ```bash
-streamlit run app_full.py
+streamlit run app.py
 ```
 
-## Project Structure
+---
 
-* app_full.py — Main application
-* index_data/ — FAISS index and metadata
-* rag_nlp.ipynb — Development notebook
-* demo_results.json — Sample outputs
+## 📈 Future Improvements
 
-## Author
+- Hybrid Search (BM25 + FAISS)
+- Cross Encoder Re-ranking
+- LLM Integration
+- Multi-language Support
+- Docker Deployment
+
+---
+
+## 👨‍💻 Author
 
 Yash Sarin
 
-Department of Artificial Intelligence
+---
 
-Woosong University
+## 📄 License
+
+MIT License
